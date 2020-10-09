@@ -9,10 +9,12 @@ import ProductsPage from "./pages/ProductsPage";
 import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
 import ErrorPage from "./pages/ErrorPage";
+import Header from "./components/layout/Header";
 
 function App() {
 	return (
 		<Router>
+			<Header />
 			<Switch>
 				<Route exact path="/">
 					<HomePage />
