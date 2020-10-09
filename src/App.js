@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage";
 import ProductsPage from "./pages/ProductsPage";
 import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
 	return (
@@ -16,17 +17,20 @@ function App() {
 				<Route exact path="/">
 					<HomePage />
 				</Route>
-				<Route exact path="/about">
+				<Route path="/about">
 					<AboutPage />
 				</Route>
-				<Route exact path="/products">
+				<Route path="/products">
 					<ProductsPage />
 				</Route>
-				<Route exact path="/login">
+				<Route path="/login">
 					<LoginPage />
 				</Route>
-				<Route exact path="/cart">
+				<Route path="/cart">
 					<CartPage />
+				</Route>
+				<Route path="*">
+					<ErrorPage />
 				</Route>
 			</Switch>
 		</Router>
