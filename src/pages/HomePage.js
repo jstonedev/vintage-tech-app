@@ -1,14 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { Fragment } from "react";
+import Hero from "../components/layout/Hero";
+import { Link } from "react-router-dom";
 
-const HomePage = (props) => {
+const HomePage = () => {
 	return (
-		<div>
-			<h1>Home Page</h1>
-		</div>
+		<Fragment>
+			<Hero>
+				<Link to="/products" className="btn btn-primary btn-hero">
+					our products
+				</Link>
+			</Hero>
+		</Fragment>
 	);
 };
-
-HomePage.propTypes = {};
 
 export default HomePage;
