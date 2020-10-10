@@ -5,10 +5,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Pages
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import ProductsPage from "./pages/ProductsPage";
-import LoginPage from "./pages/LoginPage";
-import CartPage from "./pages/CartPage";
-import ErrorPage from "./pages/ErrorPage";
+import ProductsPage from "./components/products/Products";
+import LoginPage from "./components/auth/Login";
+import CartPage from "./components/cart/Cart";
+import Error from "./components/Error";
 import Header from "./components/layout/Header";
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
 					<CartPage />
 				</Route>
 				<Route path="*">
-					<ErrorPage />
+					<Error />
 				</Route>
 			</Switch>
 		</Router>
